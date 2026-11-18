@@ -1,0 +1,133 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Réponses automatiques · Galerie Cécile Fakhoury (démonstration)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:#111;background:#fff;-webkit-font-smoothing:antialiased}
+.demo{background:#B11B35;color:#fff;text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;padding:8px 12px;text-transform:uppercase}
+header{max-width:1180px;margin:0 auto;padding:26px 24px 8px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+header img{height:34px}
+header .k{font-size:11px;font-weight:600;letter-spacing:.14em;color:#6B6B6B;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding:10px 24px 40px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1.05;margin:18px 0 14px}
+.lead{font-size:16px;line-height:1.6;color:#444;max-width:560px}
+.tabs{display:flex;gap:8px;margin:26px 0 14px}
+.tab{border:1px solid #DDD;background:#fff;border-radius:999px;padding:9px 16px;font:600 14px Inter;cursor:pointer;display:flex;align-items:center;gap:8px;color:#333}
+.tab.on{background:#111;color:#fff;border-color:#111}
+.sug-t{font-size:11px;font-weight:700;letter-spacing:.12em;color:#6B6B6B;text-transform:uppercase;margin:22px 0 10px}
+.sugs{display:flex;flex-wrap:wrap;gap:8px}
+.sug{border:1px solid #E4E0D8;background:#F7F5F1;border-radius:10px;padding:8px 12px;font:500 13.5px Inter;cursor:pointer;color:#222;text-align:left}
+.sug:hover{border-color:#111}
+.rules{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rule{border:1px solid #E4E0D8;border-radius:14px;padding:14px 16px}
+.rule b{display:flex;align-items:center;gap:8px;font-size:14px;margin-bottom:6px}
+.rule p{font-size:13.5px;line-height:1.5;color:#555}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.src{margin-top:18px;font-size:12px;color:#6B6B6B;line-height:1.55}
+.src a{color:#206D9C}
+/* téléphone */
+.phone{width:400px;height:820px;border-radius:56px;background:#111;padding:12px;box-shadow:0 24px 60px rgba(0,0,0,.18);position:sticky;top:20px}
+.scr{width:100%;height:100%;border-radius:44px;overflow:hidden;background:#fff;display:flex;flex-direction:column;position:relative}
+.isl{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:30px;border-radius:20px;background:#111;z-index:3}
+.sb{height:46px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:8px 30px 0;font-size:14px;font-weight:600}
+.top{flex:none;display:flex;align-items:center;gap:10px;padding:8px 14px 10px;border-bottom:1px solid #EFEFEF}
+.av{width:36px;height:36px;border-radius:50%;border:1px solid #E6E6E6;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff;flex:none}
+.av img{width:30px}
+.nm{font-size:15px;font-weight:600}.st{font-size:12px;color:#737373}
+.chat{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.li .chat{background:#F4F2EE}
+.day{align-self:center;font-size:11.5px;color:#8E8E8E;margin:2px 0 6px}
+.m{max-width:80%;font-size:14.5px;line-height:1.42;padding:9px 13px;border-radius:20px;white-space:pre-wrap;word-wrap:break-word}
+.in{align-self:flex-end;background:#3797F0;color:#fff;border-bottom-right-radius:6px}
+.out{align-self:flex-start;background:#EFEFEF;color:#111;border-bottom-left-radius:6px}
+.li .in{background:#0A66C2}
+.li .out{background:#fff;border:1px solid #E6E3DD}
+.ex{align-self:flex-end;font-size:10.5px;color:#9A9A9A;margin-top:-4px}
+.tag{align-self:flex-start;font-size:11px;font-weight:600;border-radius:8px;padding:4px 8px;margin-top:-2px;max-width:85%;line-height:1.35}
+.tag.a{background:#E3F1DD;color:#274E13}.tag.h{background:#F9DCD9;color:#9C0006}
+.typing{align-self:flex-start;background:#EFEFEF;border-radius:18px;padding:10px 14px;display:flex;gap:4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:#999;animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.bar{flex:none;padding:10px 12px 24px;display:flex;gap:8px;align-items:center;border-top:1px solid #EFEFEF;background:#fff}
+.bar input{flex:1;border:1px solid #DBDBDB;border-radius:22px;height:42px;padding:0 16px;font:14.5px Inter;outline:none}
+.bar button{border:0;background:none;font:600 15px Inter;color:#3797F0;cursor:pointer;padding:0 6px}
+.li .bar button{color:#0A66C2}
+footer{max-width:1180px;margin:0 auto;padding:18px 24px 30px;border-top:1px solid #EEE;font-size:12px;color:#888}
+@media(max-width:900px){
+ .wrap{grid-template-columns:1fr;gap:24px;padding:4px 16px 30px}
+ header{padding:18px 16px 4px} h1{font-size:34px}
+ .phone{width:100%;max-width:380px;height:600px;margin:0 auto;position:static;border-radius:48px;padding:10px}
+ .scr{border-radius:38px}
+ .rules{grid-template-columns:1fr}
+ .left{order:2}.right{order:1}
+}
+</style></head><body>
+<div class="demo">Démonstration · messages d'exemple, aucune réponse n'est envoyée</div>
+<header><img src="img/logo.png" alt="Galerie Cécile Fakhoury"><span class="k">Réponses automatiques</span></header>
+<div class="wrap">
+<div class="left">
+<h1>Une réponse immédiate aux questions simples, l'équipe pour tout le reste</h1>
+<p class="lead">Écrivez une question comme un visiteur sur Instagram ou LinkedIn. La réponse part tout de suite, en français ou en anglais selon votre message. Prix, achat, presse et relations avec les artistes : une réponse d'attente, et le message est transmis à l'équipe.</p>
+<div class="tabs"><button class="tab on" data-c="ig">Instagram</button><button class="tab" data-c="li">LinkedIn</button></div>
+<div class="sug-t">Essayez</div>
+<div class="sugs" id="sugs"></div>
+<div class="rules">
+ <div class="rule"><b><span class="dot" style="background:#4F8A2E"></span>Réponse automatique</b><p>Expositions, adresses, téléphones, lettre d'information : la réponse est tirée de la base, mise à jour à chaque nouvelle exposition.</p></div>
+ <div class="rule"><b><span class="dot" style="background:#B11B35"></span>Toujours un humain</b><p>Prix, achat, presse, candidatures et relations avec les artistes : un accusé de réception, puis l'équipe répond elle-même.</p></div>
+</div>
+<p class="src" id="src">Expositions, adresses et téléphones repris de <a href="https://www.cecilefakhoury.com" target="_blank" rel="noopener">cecilefakhoury.com</a> (relevé du 18/11/2026). Les horaires ne figurent pas sur le site : la réponse renvoie vers la galerie.</p>
+</div>
+<div class="right">
+<div class="phone" id="ph"><div class="scr"><div class="isl"></div>
+<div class="sb"><span>11:30</span><span>●●● ▮</span></div>
+<div class="top"><div class="av"><img src="img/logo.png" alt=""></div><div><div class="nm" id="nm">galeriececilefakhoury</div><div class="st" id="stt">Répond en général immédiatement</div></div></div>
+<div class="chat" id="chat"><div class="day">Aujourd'hui</div></div>
+<form class="bar" id="f"><input id="q" autocomplete="off" placeholder="Écrire un message…"><button>Envoyer</button></form>
+</div></div>
+</div></div>
+<footer>Page de démonstration, non référencée. Visiteurs fictifs.</footer>
+<script>
+const BASE=[{"id": "prochaine", "q": "Prochaine exposition", "kw": "prochaine, prochain, next, upcoming, a venir, bientot, nouvelle expo, new show, new exhibition, programme", "fr": "Bonjour ! Notre prochaine exposition, « Lu Nëbtu » de Kassou Seydou, est présentée au Sokhamon Hôtel, à Dakar, du 19 novembre au 19 décembre 2026. À Abidjan, « Dieu n'est pas obligé » de Roméo Mivekannin est à voir jusqu'au 9 janvier 2027. Tout le programme : cecilefakhoury.com/exhibitions", "en": "Hello! Our next exhibition, “Lu Nëbtu” by Kassou Seydou, is on view at the Sokhamon Hotel in Dakar, from 19 November to 19 December 2026. In Abidjan, “Dieu n'est pas obligé” by Roméo Mivekannin runs until 9 January 2027. Full programme: cecilefakhoury.com/exhibitions", "mode": "auto", "dest": ""}, {"id": "encours", "q": "Exposition en cours", "kw": "expo, exhibition, show, en ce moment, actuellement, current, now on, a voir, accrochage, mivekannin, romeo, dieu n'est pas oblige, still on", "fr": "Bonjour ! « Dieu n'est pas obligé » de Roméo Mivekannin est à voir à la galerie d'Abidjan, du 5 novembre 2026 au 9 janvier 2027. Présentation et œuvres : cecilefakhoury.com/exhibitions", "en": "Hello! “Dieu n'est pas obligé” by Roméo Mivekannin is on view at our Abidjan gallery, from 5 November 2026 to 9 January 2027. Details and works: cecilefakhoury.com/exhibitions", "mode": "auto", "dest": ""}, {"id": "biennale", "q": "Biennale de Dakar", "kw": "biennale, biennial, dak art, dakart", "fr": "Bonjour ! La 16e Biennale de Dakar se tient du 19 novembre au 19 décembre 2026. Eva Diallo, Serigne Ibrahima Dieye et Cheikh Ndiaye, avec qui la galerie a collaboré, sont dans l'exposition internationale officielle. Et au Sokhamon Hôtel : « Lu Nëbtu » de Kassou Seydou. Plus d'infos : cecilefakhoury.com/events", "en": "Hello! The 16th Dakar Biennale runs from 19 November to 19 December 2026. Eva Diallo, Serigne Ibrahima Dieye and Cheikh Ndiaye, with whom the gallery has worked, are in the official international exhibition. And at the Sokhamon Hotel: “Lu Nëbtu” by Kassou Seydou. More: cecilefakhoury.com/events", "mode": "auto", "dest": ""}, {"id": "dakar", "q": "Lieu à Dakar", "kw": "*dakar, senegal, sokhamon", "fr": "Bonjour ! À Dakar, « Lu Nëbtu » de Kassou Seydou est présentée au Sokhamon Hôtel, du 19 novembre au 19 décembre 2026. Pour venir à la galerie de Dakar, l'équipe vous indique l'adresse et les horaires : +221 33 842 90 91 ou dakar@cecilefakhoury.com.", "en": "Hello! In Dakar, “Lu Nëbtu” by Kassou Seydou is on view at the Sokhamon Hotel, from 19 November to 19 December 2026. To visit our Dakar gallery, the team will give you the address and opening hours: +221 33 842 90 91 or dakar@cecilefakhoury.com.", "mode": "auto", "dest": ""}, {"id": "abidjan", "q": "Adresse à Abidjan", "kw": "ou etes, etes ou, ou se trouve, ou est la galerie, c est ou, adresse, address, where, located, location, venir, plan, *abidjan, cocody, latrille", "fr": "Bonjour ! La galerie d'Abidjan se trouve à Cocody, boulevard Latrille, entre la SODEMI et l'immeuble Carbone. Téléphone : +225 27 22 44 66 77. Nous avons aussi un espace à Dakar et un showroom à Paris, sur rendez-vous.", "en": "Hello! Our Abidjan gallery is in Cocody, boulevard Latrille, entre la SODEMI et l'immeuble Carbone. Phone: +225 27 22 44 66 77. We also have a space in Dakar and a showroom in Paris, by appointment.", "mode": "auto", "dest": ""}, {"id": "paris", "q": "Showroom de Paris", "kw": "*paris, france, showroom, rendez vous, rdv, appointment", "fr": "Bonjour ! À Paris, la galerie vous reçoit dans son showroom, sur rendez-vous uniquement : +33 7 62 06 36 20 ou paris@cecilefakhoury.com.", "en": "Hello! In Paris, the gallery welcomes you in its showroom, by appointment only: +33 7 62 06 36 20 or paris@cecilefakhoury.com.", "mode": "auto", "dest": ""}, {"id": "horaires", "q": "Horaires et jours d'ouverture", "kw": "horaire, heure, ouvert, ouvrez, ouverture, ferme, fermez, dimanche, samedi, lundi, week end, open, opening, hours, closed, sunday, saturday, monday", "fr": "Bonjour ! Pour les jours et heures d'ouverture, le plus simple est d'appeler la galerie avant votre visite : Abidjan +225 27 22 44 66 77, Dakar +221 33 842 90 91. À Paris, le showroom reçoit sur rendez-vous : +33 7 62 06 36 20. Toutes nos coordonnées : cecilefakhoury.com/team", "en": "Hello! For opening days and hours, please call the gallery before your visit: Abidjan +225 27 22 44 66 77, Dakar +221 33 842 90 91. In Paris, the showroom is open by appointment: +33 7 62 06 36 20. All our contacts: cecilefakhoury.com/team", "mode": "auto", "dest": ""}, {"id": "contact", "q": "Contact et téléphone", "kw": "contact, telephone, numero, phone, number, email, mail, joindre, appeler, call, whatsapp", "fr": "Bonjour ! Abidjan : +225 27 22 44 66 77, abidjan@cecilefakhoury.com. Dakar : +221 33 842 90 91, dakar@cecilefakhoury.com. Paris : +33 7 62 06 36 20, paris@cecilefakhoury.com.", "en": "Hello! Abidjan: +225 27 22 44 66 77, abidjan@cecilefakhoury.com. Dakar: +221 33 842 90 91, dakar@cecilefakhoury.com. Paris: +33 7 62 06 36 20, paris@cecilefakhoury.com.", "mode": "auto", "dest": ""}, {"id": "lettre", "q": "Lettre d'information", "kw": "newsletter, lettre, bulletin, inscri, abonner, subscribe, mailing, invitation, vernissage, opening night", "fr": "Bonjour ! Pour recevoir nos invitations et l'actualité de la galerie, inscrivez-vous à notre lettre : cecilefakhoury.com/mailing-list", "en": "Hello! To receive our invitations and gallery news, sign up to our newsletter: cecilefakhoury.com/mailing-list", "mode": "auto", "dest": ""}, {"id": "prix", "q": "Prix, achat, disponibilité d’une œuvre", "kw": "prix, tarif, combien, cout, coute, acheter, achat, acquerir, acquisition, disponible, vendu, vente, price, cost, how much, buy, purchase, available, for sale, sold, catalogue, liste des oeuvres", "fr": "Bonjour, merci pour votre intérêt pour cette œuvre. Votre message est transmis à l'équipe de la galerie, qui vous répond personnellement.", "en": "Hello, thank you for your interest in this work. Your message has been passed on to the gallery team, who will reply to you personally.", "mode": "humain", "dest": "Galerie de la ville concernée (abidjan@, dakar@ ou paris@)"}, {"id": "presse", "q": "Demande de presse", "kw": "journaliste, journalist, presse, press, media, interview, entretien, reportage, article, magazine, redaction, podcast, tournage, filming, photo credit, visuels hd, high res", "fr": "Bonjour, merci pour votre demande. Elle est transmise à notre responsable presse et communication, qui revient vers vous rapidement. Contact direct : communication@cecilefakhoury.com", "en": "Hello, thank you for your request. It has been passed on to our press and communication manager, who will get back to you shortly. Direct contact: communication@cecilefakhoury.com", "mode": "humain", "dest": "Relations presse et communication · communication@cecilefakhoury.com"}, {"id": "candidature", "q": "Candidature spontanée d'un artiste", "kw": "portfolio, candidature, dossier artistique, je suis artiste, je suis peintre, je suis photographe, je suis sculpteur, mon travail, mes oeuvres, representer, represent, submission, submit, i am an artist, my work, my portfolio", "fr": "Bonjour, merci d'avoir pensé à la galerie. Votre message et votre dossier sont transmis à l'équipe, qui en prend connaissance.", "en": "Hello, thank you for thinking of the gallery. Your message and portfolio have been passed on to the team, who will review them.", "mode": "humain", "dest": "Équipe de la galerie d'Abidjan · abidjan@cecilefakhoury.com (adresse dédiée : à confirmer par la galerie)"}, {"id": "artiste", "q": "Relation avec un artiste (contact, collaboration, commande)", "kw": "contacter l'artiste, joindre l'artiste, collaboration, collaborer, partenariat, commande, commission, contact the artist, reach the artist, collaborate, partnership, studio visit", "fr": "Bonjour, merci pour votre message. Les relations avec nos artistes passent par l'équipe de la galerie : votre demande lui est transmise, elle vous répond personnellement.", "en": "Hello, thank you for your message. Relations with our artists go through the gallery team: your request has been passed on and they will reply to you personally.", "mode": "humain", "dest": "Direction de la galerie concernée"}, {"id": "groupe", "q": "Visite de groupe", "kw": "groupe, group, classe, class, etudiants, eleves, students, ecole, school, universite, visite guidee, guided tour, visite de groupe, association, entreprise, team, equipe de", "fr": "Bonjour, merci pour votre message. Les visites de groupe s'organisent directement avec l'équipe de la galerie : votre demande lui est transmise, elle vous propose une date. Contact direct : abidjan@cecilefakhoury.com, +225 27 22 44 66 77.", "en": "Hello, thank you for your message. Group visits are arranged directly with the gallery team: your request has been passed on and they will suggest a date. Direct contact: abidjan@cecilefakhoury.com, +225 27 22 44 66 77.", "mode": "humain", "dest": "Galerie d'Abidjan · abidjan@cecilefakhoury.com (ou dakar@ pour Dakar)"}, {"id": "defaut", "q": "Autre question (non reconnue)", "kw": "", "fr": "Bonjour, merci pour votre message ! L'équipe de la galerie le lit et vous répond au plus vite. En attendant, notre programme : cecilefakhoury.com/exhibitions", "en": "Hello, thank you for your message! The gallery team will read it and reply as soon as possible. Meanwhile, our programme: cecilefakhoury.com/exhibitions", "mode": "humain", "dest": "Boîte de messages de la galerie, traitée par l'équipe"}];
+const SHEET='https://docs.google.com/spreadsheets/d/1aknclWv1cGK35DSVg1Q5kgfTJerSkcxCCb0kxfzrJag/gviz/tq?tqx=out:csv&gid=1060572952&range=A11:I40&headers=0';
+let R=BASE, chan='ig';
+const SUG={ig:["Quelle est la prochaine expo ?","Vous êtes où à Dakar ?","Vous ouvrez le dimanche ?","Is the Mivekannin show still on?","Combien coûte une toile ?","Do you have a newsletter?"],
+ li:["Bonjour, nous souhaitons venir avec un groupe de 20 étudiants en art.","Hello, I'm a journalist preparing a piece on the Dakar Biennale.","Bonjour, je suis peintre et j'aimerais vous présenter mon portfolio.","Comment contacter Roméo Mivekannin pour une collaboration ?"]};
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
+const EN=new Set('the is are you your do does what where when how still open opening show hello hi can could would i my we our next please thanks thank is there any'.split(' '));
+const FR=new Set('le la les est vous votre quelle quel quand comment ou bonjour salut je mon ma nous des une un merci encore ouvrez prochaine expo c est'.split(' '));
+function lang(t){let e=0,f=0;norm(t).split(' ').forEach(w=>{if(EN.has(w))e++;if(FR.has(w))f++});return e>f?'en':'fr'}
+function match(t){const n=' '+norm(t)+' ';const sc={};
+ R.forEach(r=>{let s=0;(r.kw||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(x=>{const k=norm(x);if(k&&n.includes(' '+k))s+=k.length*(x.startsWith('*')?3:1)});if(s)sc[r.id]=s});
+ const hum=Object.keys(sc).filter(k=>R.find(r=>r.id==k).mode=='humain');
+ const pool=hum.length?hum:Object.keys(sc);
+ if(!pool.length)return R.find(r=>r.id=='defaut');
+ pool.sort((a,b)=>sc[b]-sc[a]);return R.find(r=>r.id==pool[0])}
+const chat=document.getElementById('chat');
+function add(cls,txt){const d=document.createElement('div');d.className=cls;d.textContent=txt;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
+function ask(t){t=t.trim();if(!t)return;add('m in',t);add('ex','Exemple · visiteur fictif');
+ const r=match(t),l=lang(t);const ty=document.createElement('div');ty.className='typing';ty.innerHTML='<i></i><i></i><i></i>';chat.appendChild(ty);chat.scrollTop=chat.scrollHeight;
+ setTimeout(()=>{ty.remove();add('m out',r[l]);
+  if(r.mode=='humain')add('tag h',(l=='en'?'Passed to the team':'Transmis à l\u2019équipe')+' · '+r.dest);
+  else add('tag a',(l=='en'?'Automatic reply':'Réponse automatique')+' · '+r.q);},700)}
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const q=document.getElementById('q');ask(q.value);q.value=''};
+function sugs(){const s=document.getElementById('sugs');s.innerHTML='';SUG[chan].forEach(t=>{const b=document.createElement('button');b.className='sug';b.textContent=t;b.onclick=()=>ask(t);s.appendChild(b)})}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');chan=b.dataset.c;
+ document.getElementById('ph').className='phone'+(chan=='li'?' li':'');
+ document.getElementById('nm').textContent=chan=='li'?'Galerie Cécile Fakhoury':'galeriececilefakhoury';
+ document.getElementById('stt').textContent=chan=='li'?'Page · Galeries d\u2019art':'Répond en général immédiatement';
+ chat.innerHTML='<div class="day">Aujourd\u2019hui</div>';sugs()});
+sugs();
+// lecture de la base en direct dans le classeur (si disponible), sinon la copie intégrée
+function csv(t){const rows=[];let row=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];
+ if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+ else if(c=='"')q=true;else if(c==','){row.push(f);f=''}else if(c=='\n'){row.push(f);rows.push(row);row=[];f=''}else if(c!='\r')f+=c}
+ if(f||row.length){row.push(f);rows.push(row)}return rows}
+fetch(SHEET).then(r=>r.ok?r.text():Promise.reject()).then(t=>{const rows=csv(t).filter(r=>r[8]&&r[2]);
+ if(rows.length>=8){R=rows.map(r=>({q:r[0],kw:r[1],fr:r[2],en:r[3],mode:r[4]=='Humain'?'humain':'auto',dest:r[5],id:r[8]}));
+ if(!R.find(r=>r.id=='defaut'))R.push(BASE.find(r=>r.id=='defaut'));
+ document.getElementById('src').insertAdjacentHTML('beforeend',' Base lue en direct dans le classeur de la galerie.')}}).catch(()=>{});
+</script></body></html>
